@@ -1,10 +1,18 @@
+## Project Overview
+
+This project is a Go/Gin API for managing tasks, with endpoints for creating, retrieving, updating, and deleting tasks. It provides a solid foundation for building more features and functionality upon.
+
+## Project Details
+
+The API is built with Go and Gin, and it allows users to perform CRUD (Create, Read, Update, and Delete) operations on tasks. It provides endpoints for creating new tasks, retrieving a single task or a list of tasks, updating a task, and deleting a task. The project is organized in a modular and easy-to-follow structure, making it easy to add more endpoints or functionality as needed.
+
+This API can be used as a starting point for building a more complex task management system or integrated with other applications. With its simple and well-organized codebase, developers can easily extend its functionality to meet their specific needs.
+
 ## Project structure
 
 This is a project structure for a Go/Gin API for managing tasks. Here is a simplified breakdown of the project structure:
 
 ```bash
-@julio ➜ task-manager-api-golang git(main) tree
-.
 ├── cmd
 │   └── main.go
 ├── go.mod
@@ -27,9 +35,6 @@ This is a project structure for a Go/Gin API for managing tasks. Here is a simpl
 │       ├── retrieve_task.go
 │       └── update_task.go
 └── README.md
-
-8 directories, 14 files
-@julio ➜ task-manager-api-
 ```
 
 - `cmd`: This folder contains the main file of the application that starts the server.
@@ -45,3 +50,21 @@ This is a project structure for a Go/Gin API for managing tasks. Here is a simpl
 - `tasks`: This package contains the code for managing tasks, including a controller and six sub-packages for creating, retrieving, updating, and deleting tasks.
 
 Overall, the project is organized in a modular and easy-to-follow structure. The Makefile provides a convenient way to build and run the application, while the pkg folder separates the code into reusable packages.
+
+## How to run the application
+
+To run the application, you need to have Go installed on your machine. If you don't have it installed, you can download and install it from the official website.
+
+After installing Go, you can clone the repository and start the application by running the following commands:
+
+```bash
+git clone https://github.com/0riion/task-manager-simple-api-gin.git
+cd task-manager-simple-api-gin
+make run
+```
+
+The `make run` command will build the application and start the server on port 8080. You can then access the API at http://localhost:8000.
+
+## Implemented Programming Fundamentals
+
+This project implements several core Go programming concepts, such as variables, functions, modules, packages, services, interfaces, structs, pointers, slices, maps, and more.
