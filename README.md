@@ -60,6 +60,7 @@ After installing Go, you can clone the repository and start the application by r
 ```bash
 git clone https://github.com/0riion/task-manager-simple-api-gin.git
 cd task-manager-simple-api-gin
+go mod download
 make run
 ```
 
