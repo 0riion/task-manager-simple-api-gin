@@ -66,6 +66,27 @@ make run
 
 The `make run` command will build the application and start the server on port 8080. You can then access the API at http://localhost:8000.
 
+If every thing go well you will se the following output in the terminal:
+
+```bash
+Running task-manager-api...
+go run cmd/main.go
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:   export GIN_MODE=release
+ - using code:  gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/v1/tasks/create      --> github.com/0riion/task-manager-api-golang/pkg/tasks.CreateTask (3 handlers)
+[GIN-debug] GET    /api/v1/tasks             --> github.com/0riion/task-manager-api-golang/pkg/tasks.ListTasks (3 handlers)
+[GIN-debug] GET    /api/v1/tasks/:id         --> github.com/0riion/task-manager-api-golang/pkg/tasks.RetrieveTask (3 handlers)
+[GIN-debug] PUT    /api/v1/tasks/:id         --> github.com/0riion/task-manager-api-golang/pkg/tasks.UpdateTask (3 handlers)
+[GIN-debug] DELETE /api/v1/tasks/:id         --> github.com/0riion/task-manager-api-golang/pkg/tasks.DeleteTask (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8000
+```
+
 ## Implemented Programming Fundamentals
 
 This project implements several core Go programming concepts, such as variables, functions, modules, packages, services, interfaces, structs, pointers, slices, maps, and more.
