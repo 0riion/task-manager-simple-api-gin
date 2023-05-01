@@ -7,6 +7,7 @@ import (
 )
 
 func RetrieveTask(c *gin.Context) {
+	id := c.Param("id")
 
-	c.JSON(http.StatusOK, gin.H{"message": "Task retrieved successfully"})
+	c.JSON(http.StatusOK, gin.H{"message": "Task retrieved successfully", "id": id})
 }
