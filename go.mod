@@ -1,4 +1,4 @@
-module github.com/0riion/task-manager-api-golang
+module github.com/0riion/date-manager-api-golang
 
 go 1.18
 

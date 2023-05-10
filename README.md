@@ -1,16 +1,16 @@
 ## Project Overview
 
-This project is a Go/Gin API for managing tasks, with endpoints for creating, retrieving, updating, and deleting tasks. It provides a solid foundation for building more features and functionality upon.
+This project is a Go/Gin API for managing dates, with endpoints for creating, retrieving, updating, and deleting dates. It provides a solid foundation for building more features and functionality upon.
 
 ## Project Details
 
-The API is built with Go and Gin, and it allows users to perform CRUD (Create, Read, Update, and Delete) operations on tasks. It provides endpoints for creating new tasks, retrieving a single task or a list of tasks, updating a task, and deleting a task. The project is organized in a modular and easy-to-follow structure, making it easy to add more endpoints or functionality as needed.
+The API is built with Go and Gin, and it allows users to perform CRUD (Create, Read, Update, and Delete) operations on dates. It provides endpoints for creating new dates, retrieving a single date or a list of dates, updating a date, and deleting a date. The project is organized in a modular and easy-to-follow structure, making it easy to add more endpoints or functionality as needed.
 
-This API can be used as a starting point for building a more complex task management system or integrated with other applications. With its simple and well-organized codebase, developers can easily extend its functionality to meet their specific needs.
+This API can be used as a starting point for building a more complex date management system or integrated with other applications. With its simple and well-organized codebase, developers can easily extend its functionality to meet their specific needs.
 
 ## Project structure
 
-This is a project structure for a Go/Gin API for managing tasks. Here is a simplified breakdown of the project structure:
+This is a project structure for a Go/Gin API for managing dates. Here is a simplified breakdown of the project structure:
 
 ```bash
 ├── cmd
@@ -26,14 +26,14 @@ This is a project structure for a Go/Gin API for managing tasks. Here is a simpl
 │   │   │   └── db.go
 │   │   ├── envs
 │   │   └── models
-│   │       └── task.go
-│   └── tasks
+│   │       └── date.go
+│   └── dates
 │       ├── controller.go
-│       ├── create_task.go
-│       ├── delete_task.go
-│       ├── list_tasks.go
-│       ├── retrieve_task.go
-│       └── update_task.go
+│       ├── create_date.go
+│       ├── delete_date.go
+│       ├── list_dates.go
+│       ├── retrieve_date.go
+│       └── update_date.go
 └── README.md
 ```
 
@@ -47,7 +47,7 @@ This is a project structure for a Go/Gin API for managing tasks. Here is a simpl
 
 - `common`: This package contains common functionality used throughout the application, such as configuration, database access, environment variables, and data models.
 
-- `tasks`: This package contains the code for managing tasks, including a controller and six sub-packages for creating, retrieving, updating, and deleting tasks.
+- `dates`: This package contains the code for managing dates, including a controller and six sub-packages for creating, retrieving, updating, and deleting dates.
 
 Overall, the project is organized in a modular and easy-to-follow structure. The Makefile provides a convenient way to build and run the application, while the pkg folder separates the code into reusable packages.
 
@@ -58,8 +58,8 @@ To run the application, you need to have Go installed on your machine. If you do
 After installing Go, you can clone the repository and start the application by running the following commands:
 
 ```bash
-git clone https://github.com/0riion/task-manager-simple-api-gin.git
-cd task-manager-simple-api-gin
+git clone https://github.com/0riion/date-manager-simple-api-gin.git
+cd date-manager-simple-api-gin
 go mod download
 make run
 ```
@@ -69,7 +69,7 @@ The `make run` command will build the application and start the server on port 8
 If every thing go well you will se the following output in the terminal:
 
 ```bash
-Running task-manager-api...
+Running date-manager-api...
 go run cmd/main.go
 [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
 
@@ -77,11 +77,11 @@ go run cmd/main.go
  - using env:   export GIN_MODE=release
  - using code:  gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] POST   /api/v1/tasks/create      --> github.com/0riion/task-manager-api-golang/pkg/tasks.CreateTask (3 handlers)
-[GIN-debug] GET    /api/v1/tasks             --> github.com/0riion/task-manager-api-golang/pkg/tasks.ListTasks (3 handlers)
-[GIN-debug] GET    /api/v1/tasks/:id         --> github.com/0riion/task-manager-api-golang/pkg/tasks.RetrieveTask (3 handlers)
-[GIN-debug] PUT    /api/v1/tasks/:id         --> github.com/0riion/task-manager-api-golang/pkg/tasks.UpdateTask (3 handlers)
-[GIN-debug] DELETE /api/v1/tasks/:id         --> github.com/0riion/task-manager-api-golang/pkg/tasks.DeleteTask (3 handlers)
+[GIN-debug] POST   /api/v1/dates/create      --> github.com/0riion/date-manager-api-golang/pkg/dates.CreateDate (3 handlers)
+[GIN-debug] GET    /api/v1/dates             --> github.com/0riion/date-manager-api-golang/pkg/dates.ListDates (3 handlers)
+[GIN-debug] GET    /api/v1/dates/:id         --> github.com/0riion/date-manager-api-golang/pkg/dates.Retrievedate (3 handlers)
+[GIN-debug] PUT    /api/v1/dates/:id         --> github.com/0riion/date-manager-api-golang/pkg/dates.Updatedate (3 handlers)
+[GIN-debug] DELETE /api/v1/dates/:id         --> github.com/0riion/date-manager-api-golang/pkg/dates.Deletedate (3 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :8000

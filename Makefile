@@ -1,13 +1,12 @@
-APP_NAME=task-manager-api
+APP_NAME=date-manager-api
 
 build:
-	@echo "Building $(APP_NAME)..."
-	go build -o $(APP_NAME) cmd/main.go
+	GOOS=linux GOARCH=amd64 go build -o $(APP_NAME)_linux_amd64 cmd/main.go
+	GOOS=windows GOARCH=amd64 go build -o $(APP_NAME)_windows_amd64.exe cmd/main.go
+	GOOS=darwin GOARCH=amd64 go build -o $(APP_NAME)_darwin_amd64 cmd/main.go
 
 run:
-	@echo "Running $(APP_NAME)..."
 	go run cmd/main.go
 
 clean:
-	@echo "Cleaning $(APP_NAME)..."
-	rm -f $(APP_NAME)
+	rm -f $(APP_NAME)_linux_amd64 $(APP_NAME)_windows_amd64.exe $(APP_NAME)_darwin_amd64
